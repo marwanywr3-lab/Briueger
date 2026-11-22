@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BRIUERGER | بريورجر — 90s American Retro Burger Diner • Riyadh Boulevard World USA</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Cairo:wght@500;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #FFF8EB;
+      --paper: #FFFDF7;
+      --red: #D62828;
+      --red-dark: #B11E1E;
+      --gold: #F5A623;
+      --teal: #0D9488;
+      --ink: #18181B;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--cream);
+      color: var(--ink);
+      font-family: 'Cairo', 'Space Grotesk', system-ui, -apple-system, sans-serif;
+      overflow-x: hidden;
+    }
+
+    html[dir="ltr"] body {
+      font-family: 'Space Grotesk', 'Cairo', system-ui, -apple-system, sans-serif;
+    }
+
+    .font-retro {
+      font-family: 'Bungee', 'Cairo', cursive, sans-serif;
+      letter-spacing: 0.03em;
+    }
+
+    html[dir="rtl"] .font-retro-display {
+      font-family: 'Cairo', sans-serif;
+      font-weight: 900;
+    }
+
+    html[dir="ltr"] .font-retro-display {
+      font-family: 'Bungee', sans-serif;
+      letter-spacing: 0.02em;
+    }
+
+    /* Authentic 90s Diner Hard Offset Shadows */
+    .retro-card {
+      background: var(--paper);
+      border: 2.5px solid var(--ink);
+      box-shadow: 5px 5px 0px var(--ink);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .retro-card-hover:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 8px 8px 0px var(--ink);
+    }
+
+    .retro-btn {
+      border: 2.5px solid var(--ink);
+      box-shadow: 4px 4px 0px var(--ink);
+      transition: transform 0.14s ease, box-shadow 0.14s ease, background-color 0.14s ease;
+    }
+
+    .retro-btn:hover {
+      transform: translate(-1.5px, -1.5px);
+      box-shadow: 6px 6px 0px var(--ink);
+    }
+
+    .retro-btn:active {
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0px var(--ink);
+    }
+
+    /* Classic 90s Diner Checkered Strip */
+    .checker-strip {
+      height: 18px;
+      background-image:
+        linear-gradient(45deg, #18181B 25%, transparent 25%),
+        linear-gradient(-45deg, #18181B 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #18181B 75%),
+        linear-gradient(-45deg, transparent 75%, #18181B 75%);
+      background-size: 18px 18px;
+      background-position: 0 0, 0 9px, 9px -9px, -9px 0px;
+      background-color: #FFF8EB;
+      border-top: 2.5px solid #18181B;
+      border-bottom: 2.5px solid #18181B;
+    }
+
+    .checker-strip-red {
+      height: 14px;
+      background-image:
+        linear-gradient(45deg, #D62828 25%, transparent 25%),
+        linear-gradient(-45deg, #D62828 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #D62828 75%),
+        linear-gradient(-45deg, transparent 75%, #D62828 75%);
+      background-size: 14px 14px;
+      background-position: 0 0, 0 7px, 7px -7px, -7px 0px;
+      background-color: #FFF8EB;
+      border-top: 2px solid #18181B;
+      border-bottom: 2px solid #18181B;
+    }
+
+    /* Subtle Retro Dot Background */
+    .bg-retro-dots {
+      background-image: radial-gradient(rgba(24, 24, 27, 0.08) 1.25px, transparent 1.25px);
+      background-size: 18px 18px;
+    }
+
+    /* Marquee Animation */
+    @keyframes marqueeLTR {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marqueeLTR 28s linear infinite;
+    }
+
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
+
+    /* Neon Glow Accent for Dark Section */
+    .neon-red {
+      text-shadow: 0 0 10px rgba(214, 40, 40, 0.7), 0 0 22px rgba(214, 40, 40, 0.35);
+    }
+
+    .neon-teal {
+      text-shadow: 0 0 10px rgba(20, 184, 166, 0.75), 0 0 22px rgba(20, 184, 166, 0.35);
+    }
+
+    /* Hide scrollbar for category pills */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-retro-dots selection:bg-[#F5A623] selection:text-[#18181B]">
+
+  <!-- TOP RETRO ANNOUNCEMENT BAR -->
+  <div class="bg-[#18181B] text-[#FFF8EB] text-xs sm:text-sm py-2 px-4 border-b-2 border-[#18181B]">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2 font-bold">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-[#14B8A6] animate-pulse"></span>
+        <span data-i18n="top_location">الرياض • بوليفارد وورلد — منطقة أمريكا (USA)</span>
+      </div>
+      <div class="text-[#F5A623] font-bold" data-i18n="top_hours">
+        يومياً 4:00 عصراً – 1:00 صباحاً | نهاية الأسبوع حتى 2:00 ص
+      </div>
+    </div>
+  </div>
+
+  <!-- STICKY NAVBAR -->
+  <header class="sticky top-0 z-40 bg-[#FFF8EB]/95 backdrop-blur border-b-[2.5px] border-[#18181B]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-3">
+      <!-- Brand -->
+      <a href="#hero" class="flex items-center gap-2.5 group shrink-0">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#D62828] border-2 border-[#18181B] shadow-[3px_3px_0_#18181B] flex items-center justify-center group-hover:rotate-[-4deg] transition-transform">
+          <svg class="w-6 h-6 text-[#FFF8EB]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 11h16a1 1 0 0 1 1 1v.5a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 12.5V12a1 1 0 0 1 1-1Z"/>
+            <path d="M5 11C5 7.5 8 5 12 5s7 2.5 7 6"/>
+            <path d="M4 16h16"/>
+            <path d="M5 16v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1"/>
+          </svg>
+        </div>
+        <div class="leading-none">
+          <span class="font-retro text-xl sm:text-2xl tracking-wider text-[#18181B] block">BRIUERGER</span>
+          <span class="text-[11px] font-extrabold text-[#D62828] tracking-widest uppercase block mt-0.5" data-i18n="brand_sub">90s American Diner</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-6 font-extrabold text-sm lg:text-base">
+        <a href="#menu" class="hover:text-[#D62828] transition-colors" data-i18n="nav_menu">قائمة الطعام</a>
+        <a href="#vibe" class="hover:text-[#D62828] transition-colors" data-i18n="nav_vibe">أجواء التسعينات</a>
+        <a href="#location" class="hover:text-[#D62828] transition-colors" data-i18n="nav_location">الموقع والأوقات</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Language Toggle -->
+        <button id="langToggleBtn" type="button" class="retro-btn bg-[#FFFDF7] hover:bg-[#F5A623] text-[#18181B] font-extrabold text-xs sm:text-sm px-3 py-2 rounded-lg flex items-center gap-1.5 cursor-pointer" aria-label="Switch Language">
+          <span class="font-retro text-xs" id="langToggleLabel">EN</span>
+        </button>
+
+        <!-- Cart Button -->
+        <button id="openCartBtn" type="button" class="retro-btn bg-[#F5A623] hover:bg-[#e59718] text-[#18181B] font-extrabold text-xs sm:text-sm px-3 sm:px-4 py-2 rounded-lg flex items-center gap-2 cursor-pointer">
+          <svg class="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/>
+            <path d="M3 6h18"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="hidden sm:inline" data-i18n="nav_bag">الطلب</span>
+          <span id="cartBadge" class="inline-flex items-center justify-center min-w-[22px] h-[22px] px-1 text-xs font-black rounded-full bg-[#18181B] text-[#FFF8EB]">0</span>
+        </button>
+
+        <!-- Book Booth CTA -->
+        <button id="openReserveBtn" type="button" class="hidden sm:inline-flex retro-btn bg-[#D62828] hover:bg-[#B11E1E] text-[#FFF8EB] font-extrabold text-xs sm:text-sm px-4 py-2 rounded-lg cursor-pointer" data-i18n="nav_book">
+          احجز طاولة
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobileMenuBtn" type="button" class="md:hidden retro-btn bg-[#FFFDF7] p-2 rounded-lg cursor-pointer" aria-label="Toggle Menu">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t-2 border-[#18181B] bg-[#FFFDF7] px-4 py-4 space-y-3 font-extrabold">
+      <a href="#menu" class="mobile-nav-link block py-1.5 hover:text-[#D62828]" data-i18n="nav_menu">قائمة الطعام</a>
+      <a href="#vibe" class="mobile-nav-link block py-1.5 hover:text-[#D62828]" data-i18n="nav_vibe">أجواء التسعينات</a>
+      <a href="#location" class="mobile-nav-link block py-1.5 hover:text-[#D62828]" data-i18n="nav_location">الموقع والأوقات</a>
+      <button id="mobileReserveBtn" type="button" class="w-full retro-btn bg-[#D62828] text-[#FFF8EB] py-2.5 rounded-lg font-extrabold cursor-pointer" data-i18n="nav_book">احجز طاولة</button>
+    </div>
+  </header>
+
+  <!-- LANDSCAPE HERO SECTION -->
+  <section id="hero" class="relative pt-8 pb-12 lg:pt-12 lg:pb-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+        <!-- Hero Copy (5 cols on desktop landscape) -->
+        <div class="lg:col-span-5 space-y-5">
+          <div class="inline-flex items-center gap-2 bg-[#0D9488] text-[#FFF8EB] border-2 border-[#18181B] shadow-[3px_3px_0_#18181B] px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-extrabold">
+            <span>★</span>
+            <span data-i18n="hero_pill">بوليفارد وورلد الرياض — منطقة USA</span>
+          </div>
+
+          <h1 class="font-retro-display text-4xl sm:text-5xl lg:text-[3.35rem] leading-[1.12] text-[#18181B]">
+            <span data-i18n="hero_title_1">برجر التسعينات</span>
+            <span class="block text-[#D62828] mt-1" data-i18n="hero_title_2">الأمريكي الأصلي</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-[#3F3F46] font-semibold leading-relaxed" data-i18n="hero_desc">
+            في <strong class="text-[#18181B]">BRIUERGER</strong> نرجّع لك نكهة داينر التسعينات الأمريكي بأرقى جودة: لحم أنجوس طازج يُسحق يومياً على الصاج الساخن، خبز بريوش محمّص بالزبدة، وميلك شيك كلاسيكي في قلب بوليفارد وورلد.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-wrap items-center gap-3.5 pt-1">
+            <a href="#menu" class="retro-btn bg-[#D62828] hover:bg-[#B11E1E] text-[#FFF8EB] font-extrabold text-base px-6 py-3.5 rounded-xl inline-flex items-center gap-2">
+              <span data-i18n="hero_cta_menu">استكشف القائمة</span>
+              <span aria-hidden="true">↓</span>
+            </a>
+            <button id="heroReserveBtn" type="button" class="retro-btn bg-[#FFFDF7] hover:bg-[#F5A623] text-[#18181B] font-extrabold text-base px-6 py-3.5 rounded-xl cursor-pointer" data-i18n="hero_cta_book">
+              احجز كابينة 90s
+            </button>
+          </div>
+
+          <!-- Compact Highlights Strip -->
+          <div class="grid grid-cols-3 gap-3 pt-3">
+            <div class="retro-card rounded-xl p-3 text-center bg-[#FFFDF7]">
+              <div class="font-retro text-lg sm:text-xl text-[#D62828]">100%</div>
+              <div class="text-xs font-extrabold text-[#18181B] mt-0.5" data-i18n="stat_beef">أنجوس طازج</div>
+            </div>
+            <div class="retro-card rounded-xl p-3 text-center bg-[#FFFDF7]">
+              <div class="font-retro text-lg sm:text-xl text-[#0D9488]">90s</div>
+              <div class="text-xs font-extrabold text-[#18181B] mt-0.5" data-i18n="stat_vibe">أجواء أمريكية</div>
+            </div>
+            <div class="retro-card rounded-xl p-3 text-center bg-[#FFFDF7]">
+              <div class="font-retro text-lg sm:text-xl text-[#F5A623]">4.9★</div>
+              <div class="text-xs font-extrabold text-[#18181B] mt-0.5" data-i18n="stat_rating">تقييم الزوار</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Landscape Visual (7 cols on desktop landscape) -->
+        <div class="lg:col-span-7 relative">
+          <div class="retro-card rounded-2xl overflow-hidden bg-[#18181B] relative">
+            <img
+              src="assets/images/hero-burger.jpg"
+              alt="BRIUERGER 90s American Smash Burger, Crinkle Fries and Milkshake"
+              class="w-full h-[280px] sm:h-[380px] lg:h-[460px] object-cover block"
+            />
+            <!-- Retro Diner Price & Promo Sticker -->
+            <div class="absolute top-4 end-4 bg-[#F5A623] text-[#18181B] border-2 border-[#18181B] shadow-[4px_4px_0_#18181B] px-3.5 py-2 rounded-xl rotate-[3deg]">
+              <div class="font-retro text-[11px] leading-none uppercase">EST. 90s VIBES</div>
+              <div class="font-extrabold text-sm mt-1" data-i18n="hero_badge_price">كومبو البوليفارد 89 ر.س</div>
+            </div>
+            <!-- Bottom Caption Bar -->
+            <div class="bg-[#18181B] text-[#FFF8EB] px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm font-bold">
+              <span data-i18n="hero_caption_left">🔥 يُحضّر طازجاً عند الطلب على الصاج الساخن</span>
+              <span class="text-[#F5A623] font-retro text-xs">BOULEVARD WORLD • USA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RETRO CHECKERED DIVIDER + MARQUEE -->
+  <div class="checker-strip"></div>
+  <div class="bg-[#D62828] text-[#FFF8EB] py-3 overflow-hidden border-b-[2.5px] border-[#18181B]" dir="ltr">
+    <div class="marquee-track font-retro text-sm sm:text-base tracking-widest">
+      <span class="mx-6">★ BRIUERGER RIYADH</span>
+      <span class="mx-6 text-[#F5A623]">★ BOULEVARD WORLD USA</span>
+      <span class="mx-6">★ SMASHED FRESH DAILY</span>
+      <span class="mx-6 text-[#F5A623]">★ 90s RETRO SHAKES</span>
+      <span class="mx-6">★ PREMIUM ANGUS BEEF</span>
+      <span class="mx-6 text-[#F5A623]">★ BRIUERGER RIYADH</span>
+      <span class="mx-6">★ BOULEVARD WORLD USA</span>
+      <span class="mx-6 text-[#F5A623]">★ SMASHED FRESH DAILY</span>
+      <span class="mx-6">★ 90s RETRO SHAKES</span>
+      <span class="mx-6 text-[#F5A623]">★ PREMIUM ANGUS BEEF</span>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE MENU SECTION -->
+  <section id="menu" class="py-14 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+        <div>
+          <span class="inline-block bg-[#F5A623] text-[#18181B] border-2 border-[#18181B] px-3 py-1 rounded-md text-xs font-extrabold uppercase tracking-wider mb-3" data-i18n="menu_kicker">
+            قائمة الطعام • أسعار متوسطة إلى متوسطة عليا
+          </span>
+          <h2 class="font-retro-display text-3xl sm:text-4xl lg:text-5xl text-[#18181B]" data-i18n="menu_title">
+            منيو بريورجر الكلاسيكي
+          </h2>
+          <p class="text-[#52525B] font-semibold mt-2 max-w-2xl" data-i18n="menu_subtitle">
+            كل وجبة تُحضّر بمكونات فاخرة وتتبيلات أمريكية أصلية من حقبة التسعينات. اختر وجبتك وأضفها مباشرة لطلبك.
+          </p>
+        </div>
+
+        <!-- Live Item Count -->
+        <div class="inline-flex items-center gap-2 bg-[#FFFDF7] border-2 border-[#18181B] px-4 py-2 rounded-xl font-extrabold text-sm self-start md:self-auto shadow-[3px_3px_0_#18181B]">
+          <span class="text-[#D62828]">●</span>
+          <span id="menuCountText">7 أصناف</span>
+        </div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div id="categoryTabs" class="flex items-center gap-2.5 overflow-x-auto no-scrollbar pb-3 mb-8" role="tablist">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Menu Cards Grid -->
+      <div id="menuGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <div class="checker-strip-red"></div>
+
+  <!-- 90s VIBE & DINER INTERIOR SECTION (DARK RETRO NEON) -->
+  <section id="vibe" class="bg-[#18181B] text-[#FFF8EB] py-16 lg:py-24 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Interior Landscape Photo (7 cols) -->
+        <div class="lg:col-span-7">
+          <div class="rounded-2xl overflow-hidden border-[3px] border-[#FFF8EB] shadow-[8px_8px_0_#D62828] relative">
+            <img
+              src="assets/images/diner-interior.jpg"
+              alt="BRIUERGER 90s American Retro Diner Interior"
+              class="w-full h-[260px] sm:h-[360px] lg:h-[430px] object-cover block"
+            />
+            <div class="absolute bottom-4 start-4 bg-[#18181B]/90 backdrop-blur border-2 border-[#14B8A6] text-[#FFF8EB] px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold">
+              <span class="text-[#14B8A6]">✦</span>
+              <span data-i18n="vibe_photo_badge">كابينات جلد أحمر • نيون التسعينات • جوك بوكس كلاسيكي</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story & Features (5 cols) -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="inline-block border-2 border-[#14B8A6] text-[#14B8A6] px-3.5 py-1 rounded-full text-xs font-extrabold tracking-widest uppercase neon-teal" data-i18n="vibe_kicker">
+            تجربة التسعينات الحقيقية
+          </div>
+
+          <h2 class="font-retro-display text-3xl sm:text-4xl lg:text-5xl leading-tight">
+            <span data-i18n="vibe_title_1">أكثر من مجرد برجر..</span>
+            <span class="block text-[#F5A623] mt-1" data-i18n="vibe_title_2">آلة زمن لعام 1994</span>
+          </h2>
+
+          <p class="text-[#D4D4D8] font-medium leading-relaxed text-base sm:text-lg" data-i18n="vibe_desc">
+            استوحينا تصميم <strong class="text-white">BRIUERGER</strong> من مطاعم البرجر الأمريكية الأيقونية في التسعينات؛ أرضيات شطرنج، إضاءة نيون دافئة، موسيقى كلاسيكية، وصاج مفتوح تشاهد عليه الشيف يجهّز وجبتك لحظة بلحظة وسط أجواء منطقة أمريكا في بوليفارد وورلد.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
+            <div class="bg-[#27272A] border-2 border-[#3F3F46] rounded-xl p-4">
+              <div class="text-[#F5A623] font-extrabold text-sm mb-1" data-i18n="vibe_f1_title">🥩 لحم بلاك أنجوس يومي</div>
+              <p class="text-xs text-[#D4D4D8] leading-relaxed" data-i18n="vibe_f1_desc">مفروم طازج يومياً بدون تجميد لقرمشة سماش مثالية من الأطراف.</p>
+            </div>
+            <div class="bg-[#27272A] border-2 border-[#3F3F46] rounded-xl p-4">
+              <div class="text-[#14B8A6] font-extrabold text-sm mb-1" data-i18n="vibe_f2_title">🥤 ميلك شيك يُخفق باليد</div>
+              <p class="text-xs text-[#D4D4D8] leading-relaxed" data-i18n="vibe_f2_desc">آيسكريم فانيليا مدغشقر وشوكولاتة بلجيكية في أكواب داينر الزجاجية.</p>
+            </div>
+            <div class="bg-[#27272A] border-2 border-[#3F3F46] rounded-xl p-4">
+              <div class="text-[#D62828] font-extrabold text-sm mb-1" data-i18n="vibe_f3_title">🎵 موسيقى وأجواء 90s</div>
+              <p class="text-xs text-[#D4D4D8] leading-relaxed" data-i18n="vibe_f3_desc">جلسات عائلية وشبابية مريحة في كابينات الجلد الأحمر وتراس البوليفارد.</p>
+            </div>
+            <div class="bg-[#27272A] border-2 border-[#3F3F46] rounded-xl p-4">
+              <div class="text-[#F5A623] font-extrabold text-sm mb-1" data-i18n="vibe_f4_title">🍔 صوصات خاصة بنا</div>
+              <p class="text-xs text-[#D4D4D8] leading-relaxed" data-i18n="vibe_f4_desc">صوص 94 السري، أيولي الترافل الأسود، وصوص ناشفيل الحار.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION & VISIT US SECTION -->
+  <section id="location" class="py-14 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="retro-card rounded-3xl overflow-hidden bg-[#FFFDF7]">
+        <div class="grid grid-cols-1 lg:grid-cols-12">
+          <!-- Left / Info Side -->
+          <div class="lg:col-span-7 p-6 sm:p-10 lg:p-12 space-y-6">
+            <div class="inline-flex items-center gap-2 bg-[#D62828] text-[#FFF8EB] border-2 border-[#18181B] px-3.5 py-1 rounded-full text-xs font-extrabold">
+              <span>📍</span>
+              <span data-i18n="loc_kicker">زورونا في الرياض</span>
+            </div>
+
+            <h2 class="font-retro-display text-3xl sm:text-4xl text-[#18181B]" data-i18n="loc_title">
+              الرياض — بوليفارد وورلد (منطقة USA)
+            </h2>
+
+            <p class="text-[#52525B] font-semibold leading-relaxed" data-i18n="loc_desc">
+              تجدون مطعم <strong class="text-[#18181B]">BRIUERGER</strong> في قلب منطقة أمريكا (USA Zone) داخل بوليفارد وورلد الرياض، بجانب الشارع الرئيسي للنيون والكلاسيكيات الأمريكية، مع جلسات داخلية مكيفة وتراس خارجي مطل على الفعاليات.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+              <div class="bg-[#FFF8EB] border-2 border-[#18181B] rounded-xl p-4">
+                <div class="text-xs font-extrabold text-[#D62828] uppercase mb-1" data-i18n="loc_hours_label">ساعات العمل</div>
+                <div class="font-extrabold text-sm text-[#18181B]" data-i18n="loc_hours_val1">الأحد – الأربعاء: 4:00 م – 1:00 ص</div>
+                <div class="font-bold text-xs text-[#52525B] mt-1" data-i18n="loc_hours_val2">الخميس – السبت: 4:00 م – 2:00 ص</div>
+              </div>
+
+              <div class="bg-[#FFF8EB] border-2 border-[#18181B] rounded-xl p-4">
+                <div class="text-xs font-extrabold text-[#0D9488] uppercase mb-1" data-i18n="loc_price_label">مستوى الأسعار</div>
+                <div class="font-extrabold text-sm text-[#18181B]" data-i18n="loc_price_val1">متوسطة إلى متوسطة عليا ($$–$$$)</div>
+                <div class="font-bold text-xs text-[#52525B] mt-1" data-i18n="loc_price_val2">متوسط الفرد: 65 – 95 ر.س</div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-3 pt-2">
+              <button id="copyAddressBtn" type="button" class="retro-btn bg-[#FFF8EB] hover:bg-[#F5A623] text-[#18181B] font-extrabold text-sm px-5 py-3 rounded-xl inline-flex items-center gap-2 cursor-pointer">
+                <span>📋</span>
+                <span data-i18n="loc_copy_btn">نسخ العنوان</span>
+              </button>
+              <button id="locReserveBtn" type="button" class="retro-btn bg-[#D62828] hover:bg-[#B11E1E] text-[#FFF8EB] font-extrabold text-sm px-5 py-3 rounded-xl inline-flex items-center gap-2 cursor-pointer">
+                <span>🎟️</span>
+                <span data-i18n="loc_book_btn">احجز طاولتك الآن</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right / Retro Postcard Visual Side -->
+          <div class="lg:col-span-5 bg-[#0D9488] border-t-[2.5px] lg:border-t-0 lg:border-s-[2.5px] border-[#18181B] p-6 sm:p-10 flex flex-col justify-between text-[#FFF8EB] relative overflow-hidden">
+            <div class="space-y-4 relative z-10">
+              <div class="inline-block bg-[#18181B] text-[#F5A623] font-retro text-xs px-3 py-1.5 rounded-lg border-2 border-[#FFF8EB]">
+                POSTCARD FROM RIYADH
+              </div>
+              <div class="font-retro text-3xl sm:text-4xl leading-none tracking-wide">
+                USA ZONE<br/>BOULEVARD<br/>WORLD
+              </div>
+              <p class="text-sm font-bold text-[#FFF8EB]/90 leading-relaxed" data-i18n="loc_card_note">
+                بوابة منطقة أمريكا — ممشى الداينر الكلاسيكي، الرياض، المملكة العربية السعودية. تتوفر مواقف بوليفارد وورلد الرئيسية.
+              </p>
+            </div>
+
+            <div class="mt-8 bg-[#FFF8EB] text-[#18181B] border-2 border-[#18181B] shadow-[4px_4px_0_#18181B] rounded-2xl p-4 relative z-10">
+              <div class="flex items-center justify-between text-xs font-extrabold text-[#D62828] mb-1">
+                <span data-i18n="loc_ticket_head">بطاقة دخول المذاق</span>
+                <span class="font-retro">NO. 1994</span>
+              </div>
+              <div class="font-extrabold text-sm" data-i18n="loc_ticket_body">
+                أظهر هذه الصفحة عند الكاونتر واحصل على ترقية مجانية للفرايز عند طلب أي كومبو!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#18181B] text-[#FFF8EB] border-t-[3px] border-[#18181B]">
+    <div class="checker-strip"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="text-center md:text-start">
+        <div class="font-retro text-2xl text-[#F5A623]">BRIUERGER</div>
+        <div class="text-xs sm:text-sm text-[#A1A1AA] font-bold mt-1" data-i18n="footer_loc">
+          الرياض — بوليفارد وورلد، منطقة أمريكا (USA) • @briuerger.sa
+        </div>
+      </div>
+
+      <div class="flex items-center gap-5 text-sm font-bold text-[#D4D4D8]">
+        <a href="#menu" class="hover:text-[#F5A623] transition-colors" data-i18n="nav_menu">قائمة الطعام</a>
+        <a href="#vibe" class="hover:text-[#F5A623] transition-colors" data-i18n="nav_vibe">أجواء التسعينات</a>
+        <a href="#location" class="hover:text-[#F5A623] transition-colors" data-i18n="nav_location">الموقع والأوقات</a>
+      </div>
+
+      <div class="text-xs text-[#A1A1AA] font-bold">
+        © 2026 BRIUERGER • Riyadh, KSA
+      </div>
+    </div>
+  </footer>
+
+  <!-- ORDER BAG SLIDE-OVER DRAWER -->
+  <div id="cartOverlay" class="fixed inset-0 z-50 hidden">
+    <div id="cartBackdrop" class="absolute inset-0 bg-[#18181B]/60 backdrop-blur-xs"></div>
+    <aside class="absolute top-0 bottom-0 end-0 w-full max-w-md bg-[#FFF8EB] border-s-[3px] border-[#18181B] flex flex-col shadow-2xl">
+      <!-- Header -->
+      <div class="p-5 bg-[#18181B] text-[#FFF8EB] flex items-center justify-between">
+        <div>
+          <h3 class="font-retro-display text-xl" data-i18n="cart_title">سلة طلبك</h3>
+          <p class="text-xs text-[#F5A623] font-bold mt-0.5" data-i18n="cart_sub">بوليفارد وورلد — منطقة USA</p>
+        </div>
+        <button id="closeCartBtn" type="button" class="w-9 h-9 rounded-lg bg-[#27272A] hover:bg-[#D62828] text-white font-black flex items-center justify-center cursor-pointer" aria-label="Close Cart">✕</button>
+      </div>
+
+      <!-- Order Type Toggle -->
+      <div class="p-4 border-b-2 border-[#18181B] bg-[#FFFDF7]">
+        <div class="grid grid-cols-2 gap-2">
+          <button id="orderTypeDineIn" type="button" class="py-2 rounded-lg border-2 border-[#18181B] font-extrabold text-xs sm:text-sm bg-[#F5A623] text-[#18181B] cursor-pointer" data-i18n="cart_dinein">داخل المطعم (Dine-in)</button>
+          <button id="orderTypePickup" type="button" class="py-2 rounded-lg border-2 border-[#18181B] font-extrabold text-xs sm:text-sm bg-[#FFF8EB] text-[#18181B] cursor-pointer" data-i18n="cart_pickup">استلام من الفرع (Pickup)</button>
+        </div>
+      </div>
+
+      <!-- Cart Items -->
+      <div id="cartItemsContainer" class="flex-1 overflow-y-auto p-4 space-y-3">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Cart Footer / Summary -->
+      <div class="p-5 bg-[#FFFDF7] border-t-[2.5px] border-[#18181B] space-y-3">
+        <div class="flex justify-between text-sm font-bold text-[#52525B]">
+          <span data-i18n="cart_subtotal">المجموع الفرعي</span>
+          <span id="cartSubtotal">0 ر.س</span>
+        </div>
+        <div class="flex justify-between text-sm font-bold text-[#52525B]">
+          <span data-i18n="cart_vat">ضريبة القيمة المضافة (15%)</span>
+          <span id="cartVat">0 ر.س</span>
+        </div>
+        <div class="flex justify-between text-lg font-black text-[#18181B] pt-2 border-t-2 border-dashed border-[#18181B]">
+          <span data-i18n="cart_total">الإجمالي</span>
+          <span id="cartTotal" class="text-[#D62828]">0 ر.س</span>
+        </div>
+        <button id="checkoutBtn" type="button" class="w-full retro-btn bg-[#D62828] hover:bg-[#B11E1E] disabled:opacity-50 disabled:cursor-not-allowed text-[#FFF8EB] font-extrabold py-3.5 rounded-xl text-base cursor-pointer" data-i18n="cart_checkout">
+          تأكيد الطلب الآن
+        </button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- RESERVATION MODAL -->
+  <div id="reserveModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+    <div id="reserveBackdrop" class="absolute inset-0 bg-[#18181B]/65 backdrop-blur-xs"></div>
+    <div class="relative z-10 w-full max-w-lg retro-card rounded-2xl bg-[#FFF8EB] overflow-hidden">
+      <div class="bg-[#D62828] text-[#FFF8EB] px-6 py-4 border-b-[2.5px] border-[#18181B] flex items-center justify-between">
+        <div>
+          <h3 class="font-retro-display text-xl" data-i18n="res_title">احجز كابينة 90s</h3>
+          <p class="text-xs text-[#FFF8EB]/90 font-bold" data-i18n="res_sub">BRIUERGER — بوليفارد وورلد USA</p>
+        </div>
+        <button id="closeReserveBtn" type="button" class="w-8 h-8 rounded-lg bg-[#18181B] text-white font-black flex items-center justify-center cursor-pointer" aria-label="Close Modal">✕</button>
+      </div>
+
+      <form id="reserveForm" class="p-6 space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="resName" class="block text-xs font-extrabold mb-1.5" data-i18n="res_name">الاسم الكامل</label>
+            <input id="resName" type="text" required class="w-full bg-[#FFFDF7] border-2 border-[#18181B] rounded-xl px-3.5 py-2.5 text-sm font-bold focus:outline-none focus:ring-2 focus:ring-[#F5A623]" placeholder="مثال: مروان العلي" />
+          </div>
+          <div>
+            <label for="resPhone" class="block text-xs font-extrabold mb-1.5" data-i18n="res_phone">رقم الجوال</label>
+            <input id="resPhone" type="tel" required class="w-full bg-[#FFFDF7] border-2 border-[#18181B] rounded-xl px-3.5 py-2.5 text-sm font-bold focus:outline-none focus:ring-2 focus:ring-[#F5A623]" placeholder="05X XXX XXXX" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div>
+            <label for="resDate" class="block text-xs font-extrabold mb-1.5" data-i18n="res_date">التاريخ</label>
+            <input id="resDate" type="date" required class="w-full bg-[#FFFDF7] border-2 border-[#18181B] rounded-xl px-3 py-2.5 text-sm font-bold" />
+          </div>
+          <div>
+            <label for="resTime" class="block text-xs font-extrabold mb-1.5" data-i18n="res_time">الوقت</label>
+            <select id="resTime" class="w-full bg-[#FFFDF7] border-2 border-[#18181B] rounded-xl px-3 py-2.5 text-sm font-bold">
+              <option value="17:00">5:00 PM</option>
+              <option value="18:30">6:30 PM</option>
+              <option value="20:00" selected>8:00 PM</option>
+              <option value="21:30">9:30 PM</option>
+              <option value="23:00">11:00 PM</option>
+            </select>
+          </div>
+          <div>
+            <label for="resGuests" class="block text-xs font-extrabold mb-1.5" data-i18n="res_guests">عدد الضيوف</label>
+            <select id="resGuests" class="w-full bg-[#FFFDF7] border-2 border-[#18181B] rounded-xl px-3 py-2.5 text-sm font-bold">
+              <option value="2">2</option>
+              <option value="4" selected>4</option>
+              <option value="6">6</option>
+              <option value="8">8</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label for="resSeating" class="block text-xs font-extrabold mb-1.5" data-i18n="res_seating">نوع الجلسة المفضّلة</label>
+          <select id="resSeating" class="w-full bg-[#FFFDF7] border-2 border-[#18181B] rounded-xl px-3.5 py-2.5 text-sm font-bold">
+            <!-- Options populated by JS per language -->
+          </select>
+        </div>
+
+        <button type="submit" class="w-full retro-btn bg-[#0D9488] hover:bg-[#0f766e] text-[#FFF8EB] font-extrabold py-3 rounded-xl text-base cursor-pointer" data-i18n="res_submit">
+          تأكيد الحجز
+        </button>
+      </form>
+
+      <!-- Reservation Success View -->
+      <div id="reserveSuccess" class="hidden p-6 text-center space-y-4">
+        <div class="w-14 h-14 mx-auto rounded-full bg-[#0D9488] text-white border-2 border-[#18181B] shadow-[3px_3px_0_#18181B] flex items-center justify-center text-2xl font-black">✓</div>
+        <h4 class="font-retro-display text-2xl text-[#18181B]" data-i18n="res_done_title">تم تأكيد حجزك!</h4>
+        <p id="reserveSuccessDetails" class="text-sm font-bold text-[#3F3F46] bg-[#FFFDF7] border-2 border-dashed border-[#18181B] rounded-xl p-4"></p>
+        <button id="reserveNewBtn" type="button" class="retro-btn bg-[#F5A623] text-[#18181B] font-extrabold px-6 py-2.5 rounded-xl text-sm cursor-pointer" data-i18n="res_close_btn">
+          العودة للصفحة
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="fixed bottom-5 start-1/2 -translate-x-1/2 z-50 hidden">
+    <div id="toastInner" class="bg-[#18181B] text-[#FFF8EB] border-2 border-[#F5A623] shadow-[4px_4px_0_#F5A623] px-5 py-3 rounded-xl font-extrabold text-sm flex items-center gap-2.5">
+      <span id="toastText"></span>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const I18N = {
+        ar: {
+          top_location: "الرياض • بوليفارد وورلد — منطقة أمريكا (USA)",
+          top_hours: "يومياً 4:00 عصراً – 1:00 صباحاً | نهاية الأسبوع حتى 2:00 ص",
+          brand_sub: "داينر أمريكي بطابع التسعينات",
+          nav_menu: "قائمة الطعام",
+          nav_vibe: "أجواء التسعينات",
+          nav_location: "الموقع والأوقات",
+          nav_bag: "الطلب",
+          nav_book: "احجز طاولة",
+          hero_pill: "بوليفارد وورلد الرياض — منطقة USA",
+          hero_title_1: "برجر التسعينات",
+          hero_title_2: "الأمريكي الأصلي",
+          hero_desc: "في BRIUERGER نرجّع لك نكهة داينر التسعينات الأمريكي بأرقى جودة: لحم أنجوس طازج يُسحق يومياً على الصاج الساخن، خبز بريوش محمّص بالزبدة، وميلك شيك كلاسيكي في قلب بوليفارد وورلد.",
+          hero_cta_menu: "استكشف القائمة",
+          hero_cta_book: "احجز كابينة 90s",
+          stat_beef: "أنجوس طازج",
+          stat_vibe: "أجواء أمريكية",
+          stat_rating: "تقييم الزوار",
+          hero_badge_price: "كومبو البوليفارد 89 ر.س",
+          hero_caption_left: "🔥 يُحضّر طازجاً عند الطلب على الصاج الساخن",
+          menu_kicker: "قائمة الطعام • أسعار متوسطة إلى متوسطة عليا",
+          menu_title: "منيو بريورجر الكلاسيكي",
+          menu_subtitle: "كل وجبة تُحضّر بمكونات فاخرة وتتبيلات أمريكية أصلية من حقبة التسعينات. اختر وجبتك وأضفها مباشرة لطلبك.",
+          vibe_photo_badge: "كابينات جلد أحمر • نيون التسعينات • جوك بوكس كلاسيكي",
+          vibe_kicker: "تجربة التسعينات الحقيقية",
+          vibe_title_1: "أكثر من مجرد برجر..",
+          vibe_title_2: "آلة زمن لعام 1994",
+          vibe_desc: "استوحينا تصميم BRIUERGER من مطاعم البرجر الأمريكية الأيقونية في التسعينات؛ أرضيات شطرنج، إضاءة نيون دافئة، موسيقى كلاسيكية، وصاج مفتوح تشاهد عليه الشيف يجهّز وجبتك لحظة بلحظة وسط أجواء منطقة أمريكا في بوليفارد وورلد.",
+          vibe_f1_title: "🥩 لحم بلاك أنجوس يومي",
+          vibe_f1_desc: "مفروم طازج يومياً بدون تجميد لقرمشة سماش مثالية من الأطراف.",
+          vibe_f2_title: "🥤 ميلك شيك يُخفق باليد",
+          vibe_f2_desc: "آيسكريم فانيليا مدغشقر وشوكولاتة بلجيكية في أكواب داينر الزجاجية.",
+          vibe_f3_title: "🎵 موسيقى وأجواء 90s",
+          vibe_f3_desc: "جلسات عائلية وشبابية مريحة في كابينات الجلد الأحمر وتراس البوليفارد.",
+          vibe_f4_title: "🍔 صوصات خاصة بنا",
+          vibe_f4_desc: "صوص 94 السري، أيولي الترافل الأسود، وصوص ناشفيل الحار.",
+          loc_kicker: "زورونا في الرياض",
+          loc_title: "الرياض — بوليفارد وورلد (منطقة USA)",
+          loc_desc: "تجدون مطعم BRIUERGER في قلب منطقة أمريكا (USA Zone) داخل بوليفارد وورلد الرياض، بجانب الشارع الرئيسي للنيون والكلاسيكيات الأمريكية، مع جلسات داخلية مكيفة وتراس خارجي مطل على الفعاليات.",
+          loc_hours_label: "ساعات العمل",
+          loc_hours_val1: "الأحد – الأربعاء: 4:00 م – 1:00 ص",
+          loc_hours_val2: "الخميس – السبت: 4:00 م – 2:00 ص",
+          loc_price_label: "مستوى الأسعار",
+          loc_price_val1: "متوسطة إلى متوسطة عليا ($$–$$$)",
+          loc_price_val2: "متوسط الفرد: 65 – 95 ر.س",
+          loc_copy_btn: "نسخ العنوان",
+          loc_book_btn: "احجز طاولتك الآن",
+          loc_card_note: "بوابة منطقة أمريكا — ممشى الداينر الكلاسيكي، الرياض، المملكة العربية السعودية. تتوفر مواقف بوليفارد وورلد الرئيسية.",
+          loc_ticket_head: "بطاقة دخول المذاق",
+          loc_ticket_body: "أظهر هذه الصفحة عند الكاونتر واحصل على ترقية مجانية للفرايز عند طلب أي كومبو!",
+          footer_loc: "الرياض — بوليفارد وورلد، منطقة أمريكا (USA) • @briuerger.sa",
+          cart_title: "سلة طلبك",
+          cart_sub: "بوليفارد وورلد — منطقة USA",
+          cart_dinein: "داخل المطعم (Dine-in)",
+          cart_pickup: "استلام من الفرع (Pickup)",
+          cart_subtotal: "المجموع الفرعي",
+          cart_vat: "ضريبة القيمة المضافة (15%)",
+          cart_total: "الإجمالي",
+          cart_checkout: "تأكيد الطلب الآن",
+          cart_empty: "سلتك فارغة حالياً — أضف برجر أو ميلك شيك من القائمة!",
+          res_title: "احجز كابينة 90s",
+          res_sub: "BRIUERGER — بوليفارد وورلد USA",
+          res_name: "الاسم الكامل",
+          res_phone: "رقم الجوال",
+          res_date: "التاريخ",
+          res_time: "الوقت",
+          res_guests: "عدد الضيوف",
+          res_seating: "نوع الجلسة المفضّلة",
+          res_submit: "تأكيد الحجز",
+          res_done_title: "تم تأكيد حجزك!",
+          res_close_btn: "العودة للصفحة",
+          currency: "ر.س",
+          add_to_bag: "أضف للطلب",
+          cal_unit: "سعرة",
+          items_label: "أصناف",
+          copied_toast: "تم نسخ عنوان المطعم: الرياض - بوليفارد وورلد USA",
+          added_toast: "تمت الإضافة إلى سلة الطلب!",
+          order_confirmed: "تم استلام طلبك بنجاح! رقم التذكرة:",
+          address_text: "BRIUERGER - الرياض، بوليفارد وورلد، منطقة أمريكا (USA Zone)",
+          seating_options: [
+            "كابينة جلد أحمر كلاسيك (90s Red Booth)",
+            "بار الصاج المفتوح (Open Grill Counter)",
+            "التراس الخارجي — بوليفارد وورلد (Terrace)"
+          ]
+        },
+        en: {
+          top_location: "Riyadh • Boulevard World — USA Zone",
+          top_hours: "Daily 4:00 PM – 1:00 AM | Weekends until 2:00 AM",
+          brand_sub: "90s American Retro Diner",
+          nav_menu: "Menu",
+          nav_vibe: "The 90s Vibe",
+          nav_location: "Location & Hours",
+          nav_bag: "Order",
+          nav_book: "Book a Booth",
+          hero_pill: "Boulevard World Riyadh — USA Zone",
+          hero_title_1: "AUTHENTIC 90s",
+          hero_title_2: "AMERICAN SMASH",
+          hero_desc: "At BRIUERGER, we bring back the golden era of 1990s American diners with elevated craft: fresh daily Black Angus smashed crispy on the griddle, butter-toasted brioche, and hand-spun shakes in the heart of Boulevard World.",
+          hero_cta_menu: "Explore Menu",
+          hero_cta_book: "Book a 90s Booth",
+          stat_beef: "Fresh Angus",
+          stat_vibe: "90s Americana",
+          stat_rating: "Guest Rating",
+          hero_badge_price: "Boulevard Combo 89 SAR",
+          hero_caption_left: "🔥 Smashed fresh to order on our open flat-top grill",
+          menu_kicker: "THE MENU • MID TO UPPER-MID PRICING",
+          menu_title: "BRIUERGER CLASSICS",
+          menu_subtitle: "Crafted with premium ingredients and nostalgic 90s American diner flavors. Pick your favorites and add them straight to your order bag.",
+          vibe_photo_badge: "Red Vinyl Booths • 90s Neon • Classic Jukebox",
+          vibe_kicker: "THE AUTHENTIC 90s EXPERIENCE",
+          vibe_title_1: "MORE THAN A BURGER..",
+          vibe_title_2: "A TIME MACHINE TO 1994",
+          vibe_desc: "Inspired by iconic 1990s American roadside diners — checkered floors, warm neon tubes, retro soundtracks, and an open smash-grill counter right in the middle of Boulevard World's USA Zone.",
+          vibe_f1_title: "🥩 Daily Fresh Black Angus",
+          vibe_f1_desc: "Ground fresh every morning — never frozen — for crisp caramelized edges.",
+          vibe_f2_title: "🥤 Hand-Spun Diner Shakes",
+          vibe_f2_desc: "Madagascar vanilla bean & Belgian chocolate served in chilled fluted glasses.",
+          vibe_f3_title: "🎵 90s Retro Atmosphere",
+          vibe_f3_desc: "Cozy red leather booths indoors and lively Boulevard terrace seating.",
+          vibe_f4_title: "🍔 House-Made Sauces",
+          vibe_f4_desc: "Secret '94 diner sauce, black truffle aioli, and Nashville spiced glaze.",
+          loc_kicker: "VISIT US IN RIYADH",
+          loc_title: "Riyadh — Boulevard World (USA Zone)",
+          loc_desc: "Find BRIUERGER in the heart of the USA Zone at Boulevard World Riyadh, right along the main neon diner promenade — featuring air-conditioned retro booths and an outdoor Boulevard terrace.",
+          loc_hours_label: "Opening Hours",
+          loc_hours_val1: "Sun – Wed: 4:00 PM – 1:00 AM",
+          loc_hours_val2: "Thu – Sat: 4:00 PM – 2:00 AM",
+          loc_price_label: "Price Range",
+          loc_price_val1: "Mid to Upper-Mid ($$–$$$)",
+          loc_price_val2: "Avg. per guest: 65 – 95 SAR",
+          loc_copy_btn: "Copy Address",
+          loc_book_btn: "Reserve Your Booth",
+          loc_card_note: "USA Zone Gate — Classic Diner Promenade, Boulevard World, Riyadh, Saudi Arabia. Main Boulevard World parking available.",
+          loc_ticket_head: "FLAVOR PASS",
+          loc_ticket_body: "Show this page at the counter for a complimentary loaded fries upgrade with any combo!",
+          footer_loc: "Riyadh — Boulevard World, USA Zone • @briuerger.sa",
+          cart_title: "Your Order Bag",
+          cart_sub: "Boulevard World — USA Zone",
+          cart_dinein: "Dine-in",
+          cart_pickup: "Counter Pickup",
+          cart_subtotal: "Subtotal",
+          cart_vat: "VAT (15%)",
+          cart_total: "Total",
+          cart_checkout: "Place Order Now",
+          cart_empty: "Your bag is empty — add a smash burger or retro shake from the menu!",
+          res_title: "Book a 90s Booth",
+          res_sub: "BRIUERGER — Boulevard World USA",
+          res_name: "Full Name",
+          res_phone: "Mobile Number",
+          res_date: "Date",
+          res_time: "Time Slot",
+          res_guests: "Guests",
+          res_seating: "Preferred Seating",
+          res_submit: "Confirm Reservation",
+          res_done_title: "Booth Reserved!",
+          res_close_btn: "Back to Page",
+          currency: "SAR",
+          add_to_bag: "Add to Order",
+          cal_unit: "kcal",
+          items_label: "items",
+          copied_toast: "Address copied: Riyadh - Boulevard World USA",
+          added_toast: "Added to your order bag!",
+          order_confirmed: "Order placed! Your diner ticket is:",
+          address_text: "BRIUERGER - Riyadh, Boulevard World, USA Zone",
+          seating_options: [
+            "Classic 90s Red Vinyl Booth",
+            "Open Smash-Grill Counter",
+            "Boulevard World Outdoor Terrace"
+          ]
+        }
+      };
+
+      const CATEGORIES = [
+        { id: "all", ar: "الكل", en: "All" },
+        { id: "beef", ar: "برجر اللحم", en: "Beef Burgers" },
+        { id: "chicken", ar: "الدجاج", en: "Chicken" },
+        { id: "sides", ar: "الجانبيات", en: "Sides" },
+        { id: "shakes", ar: "الميلك شيك", en: "90s Shakes" },
+        { id: "combos", ar: "الكومبو", en: "Combos" }
+      ];
+
+      const MENU_ITEMS = [
+        {
+          id: "classic-94",
+          category: "beef",
+          price: 54,
+          calories: 780,
+          image: "assets/images/classic-94-smash.jpg",
+          badge: { ar: "الأكثر طلباً", en: "BESTSELLER", color: "bg-[#D62828] text-[#FFF8EB]" },
+          name: { ar: "كلاسيك 94 سماش", en: "The '94 Classic Smash" },
+          desc: {
+            ar: "شريحتا لحم بلاك أنجوس مسحوقة، دبل شيدر أمريكي ذائب، بصل مكرمل، مخلل شبت، خس مقرمش، وصوص 94 السري في خبز بريوش محمّص.",
+            en: "Double lacy-edge Black Angus smash patties, double melted American cheddar, caramelized onions, dill pickles, crisp lettuce, and secret '94 sauce on toasted brioche."
+          }
+        },
+        {
+          id: "beverly-truffle",
+          category: "beef",
+          price: 68,
+          calories: 840,
+          image: "assets/images/beverly-truffle-swiss.jpg",
+          badge: { ar: "سيجنتشر", en: "SIGNATURE", color: "bg-[#18181B] text-[#F5A623]" },
+          name: { ar: "بيفرلي ترافل سويس", en: "Beverly Truffle Swiss" },
+          desc: {
+            ar: "شريحة أنجوس فاخرة، فطر بري سوتيه بالزبدة، جبن سويسري ذائب، بصل كريسبي مقرمش، وأيولي الترافل الأسود الفاخر.",
+            en: "Thick seared Black Angus patty topped with butter-sautéed wild mushrooms, melted Swiss cheese, crispy shallots, and rich black truffle aioli."
+          }
+        },
+        {
+          id: "route-66-brisket",
+          category: "beef",
+          price: 72,
+          calories: 920,
+          image: "assets/images/route-66-brisket.jpg",
+          badge: { ar: "مدخّن 12 ساعة", en: "12H SMOKED", color: "bg-[#F5A623] text-[#18181B]" },
+          name: { ar: "بريسكت روت 66", en: "Route 66 Smoked Brisket" },
+          desc: {
+            ar: "برجر أنجوس تعلوه شرائح لحم بريسكت مدخّن لمدة 12 ساعة، جبن سويسري، حلقات بصل ذهبية مقرمشة، وصوص باربيكيو هيكوري مدخّن.",
+            en: "Juicy Angus burger stacked with 12-hour hickory-smoked shredded brisket, melted Swiss, golden crispy onion rings, and smoky BBQ glaze."
+          }
+        },
+        {
+          id: "miami-heat",
+          category: "chicken",
+          price: 52,
+          calories: 760,
+          image: "assets/images/miami-heat-chicken.jpg",
+          badge: { ar: "سبايسي 🔥", en: "SPICY 🔥", color: "bg-[#D62828] text-[#FFF8EB]" },
+          name: { ar: "ميامي هيت كريسبي", en: "Miami Heat Crispy Chicken" },
+          desc: {
+            ar: "صدر دجاج مقرمش بتتبيلة ناشفيل الحارة، كولسلو كريمي طازج، مخلل شبت سميك، وصوص كام باك الحار في خبز بريوش طري.",
+            en: "Crunchy buttermilk fried chicken dipped in Nashville hot chili glaze, creamy purple slaw, thick dill pickles, and spicy comeback sauce."
+          }
+        },
+        {
+          id: "loaded-fries",
+          category: "sides",
+          price: 36,
+          calories: 620,
+          image: "assets/images/loaded-diner-fries.jpg",
+          badge: { ar: "للمشاركة", en: "SHAREABLE", color: "bg-[#0D9488] text-[#FFF8EB]" },
+          name: { ar: "لودد داينر فرايز", en: "Loaded Diner Crinkle Fries" },
+          desc: {
+            ar: "بطاطس كرينكل ذهبية مقرمشة مغطاة بصوص الشيدر الدافئ، قطع بيكون بقري مقرمش، هلابينو، وصوص رانش منزلي.",
+            en: "Golden crinkle-cut fries smothered in warm melted cheddar sauce, crispy beef bacon bits, sliced jalapeños, and house ranch drizzle."
+          }
+        },
+        {
+          id: "retro-shakes",
+          category: "shakes",
+          price: 32,
+          calories: 510,
+          image: "assets/images/retro-milkshakes.jpg",
+          badge: { ar: "كلاسيك 90s", en: "90s CLASSIC", color: "bg-[#F5A623] text-[#18181B]" },
+          name: { ar: "ميلك شيك التسعينات", en: "90s Hand-Spun Milkshake" },
+          desc: {
+            ar: "اختر نكهتك المفضلة: فراولة الداينر الكلاسيكية، شوكولاتة بلجيكية مالت، أو فانيليا مدغشقر مع كريمة مخفوقة وحبة كرز.",
+            en: "Choose your flavor: Classic Diner Strawberry, Belgian Chocolate Malt, or Madagascar Vanilla Bean topped with whipped cream & a cherry."
+          }
+        },
+        {
+          id: "boulevard-combo",
+          category: "combos",
+          price: 89,
+          calories: 1380,
+          image: "assets/images/hero-burger.jpg",
+          badge: { ar: "أفضل قيمة", en: "BEST VALUE", color: "bg-[#0D9488] text-[#FFF8EB]" },
+          name: { ar: "كومبو بوليفارد 90s", en: "The Boulevard 90s Combo" },
+          desc: {
+            ar: "برجر كلاسيك 94 أو دجاج ميامي هيت + بطاطس كرينكل داينر الذهبية + ميلك شيك التسعينات من اختيارك.",
+            en: "Your choice of The '94 Classic Smash or Miami Heat Chicken + golden crinkle diner fries + any 90s hand-spun milkshake."
+          }
+        }
+      ];
+
+      let state = {
+        lang: "ar",
+        category: "all",
+        orderType: "dinein",
+        cart: {} // itemId -> qty
+      };
+
+      const el = {
+        html: document.documentElement,
+        langToggleBtn: document.getElementById("langToggleBtn"),
+        langToggleLabel: document.getElementById("langToggleLabel"),
+        categoryTabs: document.getElementById("categoryTabs"),
+        menuGrid: document.getElementById("menuGrid"),
+        menuCountText: document.getElementById("menuCountText"),
+        cartBadge: document.getElementById("cartBadge"),
+        cartOverlay: document.getElementById("cartOverlay"),
+        cartBackdrop: document.getElementById("cartBackdrop"),
+        openCartBtn: document.getElementById("openCartBtn"),
+        closeCartBtn: document.getElementById("closeCartBtn"),
+        cartItemsContainer: document.getElementById("cartItemsContainer"),
+        cartSubtotal: document.getElementById("cartSubtotal"),
+        cartVat: document.getElementById("cartVat"),
+        cartTotal: document.getElementById("cartTotal"),
+        checkoutBtn: document.getElementById("checkoutBtn"),
+        orderTypeDineIn: document.getElementById("orderTypeDineIn"),
+        orderTypePickup: document.getElementById("orderTypePickup"),
+        reserveModal: document.getElementById("reserveModal"),
+        reserveBackdrop: document.getElementById("reserveBackdrop"),
+        openReserveBtn: document.getElementById("openReserveBtn"),
+        heroReserveBtn: document.getElementById("heroReserveBtn"),
+        locReserveBtn: document.getElementById("locReserveBtn"),
+        mobileReserveBtn: document.getElementById("mobileReserveBtn"),
+        closeReserveBtn: document.getElementById("closeReserveBtn"),
+        reserveForm: document.getElementById("reserveForm"),
+        reserveSuccess: document.getElementById("reserveSuccess"),
+        reserveSuccessDetails: document.getElementById("reserveSuccessDetails"),
+        reserveNewBtn: document.getElementById("reserveNewBtn"),
+        resSeating: document.getElementById("resSeating"),
+        resDate: document.getElementById("resDate"),
+        resName: document.getElementById("resName"),
+        copyAddressBtn: document.getElementById("copyAddressBtn"),
+        mobileMenuBtn: document.getElementById("mobileMenuBtn"),
+        mobileMenu: document.getElementById("mobileMenu"),
+        toast: document.getElementById("toast"),
+        toastText: document.getElementById("toastText")
+      };
+
+      let toastTimer = null;
+      function showToast(msg) {
+        el.toastText.textContent = msg;
+        el.toast.classList.remove("hidden");
+        if (toastTimer) clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+          el.toast.classList.add("hidden");
+        }, 3000);
+      }
+
+      function formatPrice(num) {
+        const cur = I18N[state.lang].currency;
+        const val = Number.isInteger(num) ? num : num.toFixed(2);
+        return state.lang === "ar" ? `${val} ${cur}` : `${val} ${cur}`;
+      }
+
+      function applyTranslations() {
+        const dict = I18N[state.lang];
+        el.html.lang = state.lang;
+        el.html.dir = state.lang === "ar" ? "rtl" : "ltr";
+        el.langToggleLabel.textContent = state.lang === "ar" ? "EN" : "عربي";
+
+        document.querySelectorAll("[data-i18n]").forEach((node) => {
+          const key = node.getAttribute("data-i18n");
+          if (dict[key]) {
+            node.textContent = dict[key];
+          }
+        });
+
+        // Update reservation form placeholders & seating select
+        el.resName.placeholder = state.lang === "ar" ? "مثال: مروان العلي" : "e.g., Marwan Al-Ali";
+        el.resSeating.innerHTML = dict.seating_options
+          .map((opt) => `<option value="${opt}">${opt}</option>`)
+          .join("");
+
+        renderCategories();
+        renderMenu();
+        renderCart();
+      }
+
+      function renderCategories() {
+        el.categoryTabs.innerHTML = CATEGORIES.map((cat) => {
+          const active = state.category === cat.id;
+          const cls = active
+            ? "bg-[#18181B] text-[#F5A623] shadow-[3px_3px_0_#D62828]"
+            : "bg-[#FFFDF7] text-[#18181B] hover:bg-[#F5A623]/30 shadow-[3px_3px_0_#18181B]";
+          return `
+            <button
+              type="button"
+              data-cat="${cat.id}"
+              role="tab"
+              aria-selected="${active}"
+              class="shrink-0 px-4 py-2 rounded-xl border-2 border-[#18181B] font-extrabold text-xs sm:text-sm transition-all cursor-pointer ${cls}"
+            >
+              ${cat[state.lang]}
+            </button>
+          `;
+        }).join("");
+      }
+
+      function renderMenu() {
+        const dict = I18N[state.lang];
+        const filtered = state.category === "all"
+          ? MENU_ITEMS
+          : MENU_ITEMS.filter((item) => item.category === state.category);
+
+        el.menuCountText.textContent = `${filtered.length} ${dict.items_label}`;
+
+        el.menuGrid.innerHTML = filtered.map((item) => {
+          const qty = state.cart[item.id] || 0;
+          const actionHtml = qty === 0
+            ? `<button type="button" data-action="add" data-id="${item.id}" class="retro-btn bg-[#D62828] hover:bg-[#B11E1E] text-[#FFF8EB] font-extrabold text-xs sm:text-sm px-4 py-2 rounded-xl cursor-pointer">
+                 + ${dict.add_to_bag}
+               </button>`
+            : `<div class="inline-flex items-center gap-2 bg-[#FFF8EB] border-2 border-[#18181B] rounded-xl p-1 shadow-[3px_3px_0_#18181B]">
+                 <button type="button" data-action="dec" data-id="${item.id}" class="w-7 h-7 rounded-lg bg-[#18181B] text-[#FFF8EB] font-black flex items-center justify-center cursor-pointer hover:bg-[#D62828]">−</button>
+                 <span class="min-w-[20px] text-center font-black text-sm">${qty}</span>
+                 <button type="button" data-action="inc" data-id="${item.id}" class="w-7 h-7 rounded-lg bg-[#18181B] text-[#FFF8EB] font-black flex items-center justify-center cursor-pointer hover:bg-[#0D9488]">+</button>
+               </div>`;
+
+          return `
+            <article class="retro-card retro-card-hover rounded-2xl overflow-hidden flex flex-col">
+              <div class="relative overflow-hidden border-b-[2.5px] border-[#18181B] bg-[#18181B]">
+                <img
+                  src="${item.image}"
+                  alt="${item.name[state.lang]}"
+                  class="w-full h-56 object-cover block hover:scale-105 transition-transform duration-300"
+                />
+                <span class="absolute top-3 start-3 ${item.badge.color} border-2 border-[#18181B] shadow-[2px_2px_0_#18181B] px-2.5 py-1 rounded-lg text-[11px] font-black tracking-wide">
+                  ${item.badge[state.lang]}
+                </span>
+                <span class="absolute bottom-3 end-3 bg-[#FFF8EB]/95 text-[#18181B] border-2 border-[#18181B] px-2.5 py-0.5 rounded-lg text-[11px] font-extrabold">
+                  ${item.calories} ${dict.cal_unit}
+                </span>
+              </div>
+
+              <div class="p-5 flex-1 flex flex-col justify-between gap-4">
+                <div>
+                  <h3 class="font-extrabold text-xl text-[#18181B] leading-snug">${item.name[state.lang]}</h3>
+                  <p class="text-sm text-[#52525B] font-medium leading-relaxed mt-2">${item.desc[state.lang]}</p>
+                </div>
+
+                <div class="pt-3 border-t-2 border-dashed border-[#18181B]/20 flex items-center justify-between gap-3">
+                  <div class="font-black text-xl text-[#D62828]">${formatPrice(item.price)}</div>
+                  ${actionHtml}
+                </div>
+              </div>
+            </article>
+          `;
+        }).join("");
+      }
+
+      function renderCart() {
+        const dict = I18N[state.lang];
+        const entries = Object.entries(state.cart).filter(([, q]) => q > 0);
+        const totalCount = entries.reduce((sum, [, q]) => sum + q, 0);
+        el.cartBadge.textContent = totalCount;
+
+        if (entries.length === 0) {
+          el.cartItemsContainer.innerHTML = `
+            <div class="text-center py-12 px-4 space-y-3">
+              <div class="text-4xl">🍔</div>
+              <p class="text-sm font-bold text-[#52525B]">${dict.cart_empty}</p>
+            </div>
+          `;
+          el.cartSubtotal.textContent = formatPrice(0);
+          el.cartVat.textContent = formatPrice(0);
+          el.cartTotal.textContent = formatPrice(0);
+          el.checkoutBtn.disabled = true;
+          return;
+        }
+
+        let subtotal = 0;
+        el.cartItemsContainer.innerHTML = entries.map(([id, qty]) => {
+          const item = MENU_ITEMS.find((m) => m.id === id);
+          if (!item) return "";
+          const lineTotal = item.price * qty;
+          subtotal += lineTotal;
+          return `
+            <div class="bg-[#FFFDF7] border-2 border-[#18181B] shadow-[3px_3px_0_#18181B] rounded-xl p-3 flex items-center gap-3">
+              <img src="${item.image}" alt="${item.name[state.lang]}" class="w-16 h-16 rounded-lg object-cover border-2 border-[#18181B] shrink-0" />
+              <div class="flex-1 min-w-0">
+                <div class="font-extrabold text-sm text-[#18181B] truncate">${item.name[state.lang]}</div>
+                <div class="text-xs font-extrabold text-[#D62828] mt-0.5">${formatPrice(lineTotal)}</div>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <button type="button" data-cart-action="dec" data-id="${item.id}" class="w-7 h-7 rounded-lg border-2 border-[#18181B] bg-[#FFF8EB] font-black text-sm hover:bg-[#D62828] hover:text-white cursor-pointer">−</button>
+                <span class="w-5 text-center font-black text-sm">${qty}</span>
+                <button type="button" data-cart-action="inc" data-id="${item.id}" class="w-7 h-7 rounded-lg border-2 border-[#18181B] bg-[#FFF8EB] font-black text-sm hover:bg-[#0D9488] hover:text-white cursor-pointer">+</button>
+              </div>
+            </div>
+          `;
+        }).join("");
+
+        const vat = subtotal * 0.15;
+        const grandTotal = subtotal + vat;
+        el.cartSubtotal.textContent = formatPrice(subtotal);
+        el.cartVat.textContent = formatPrice(vat);
+        el.cartTotal.textContent = formatPrice(grandTotal);
+        el.checkoutBtn.disabled = false;
+      }
+
+      function updateItemQty(id, delta) {
+        const next = (state.cart[id] || 0) + delta;
+        if (next <= 0) {
+          delete state.cart[id];
+        } else {
+          state.cart[id] = next;
+        }
+        renderMenu();
+        renderCart();
+      }
+
+      function openCart() {
+        el.cartOverlay.classList.remove("hidden");
+      }
+
+      function closeCart() {
+        el.cartOverlay.classList.add("hidden");
+      }
+
+      function openReserve() {
+        el.reserveForm.classList.remove("hidden");
+        el.reserveSuccess.classList.add("hidden");
+        el.reserveModal.classList.remove("hidden");
+        el.reserveModal.classList.add("flex");
+      }
+
+      function closeReserve() {
+        el.reserveModal.classList.add("hidden");
+        el.reserveModal.classList.remove("flex");
+      }
+
+      // Event Listeners
+      el.langToggleBtn.addEventListener("click", () => {
+        state.lang = state.lang === "ar" ? "en" : "ar";
+        applyTranslations();
+      });
+
+      el.categoryTabs.addEventListener("click", (e) => {
+        const btn = e.target.closest("button[data-cat]");
+        if (!btn) return;
+        state.category = btn.getAttribute("data-cat");
+        renderCategories();
+        renderMenu();
+      });
+
+      el.menuGrid.addEventListener("click", (e) => {
+        const btn = e.target.closest("button[data-action]");
+        if (!btn) return;
+        const id = btn.getAttribute("data-id");
+        const action = btn.getAttribute("data-action");
+        if (action === "add" || action === "inc") {
+          updateItemQty(id, 1);
+          if (action === "add") showToast(I18N[state.lang].added_toast);
+        } else if (action === "dec") {
+          updateItemQty(id, -1);
+        }
+      });
+
+      el.cartItemsContainer.addEventListener("click", (e) => {
+        const btn = e.target.closest("button[data-cart-action]");
+        if (!btn) return;
+        const id = btn.getAttribute("data-id");
+        const action = btn.getAttribute("data-cart-action");
+        updateItemQty(id, action === "inc" ? 1 : -1);
+      });
+
+      el.openCartBtn.addEventListener("click", openCart);
+      el.closeCartBtn.addEventListener("click", closeCart);
+      el.cartBackdrop.addEventListener("click", closeCart);
+
+      el.orderTypeDineIn.addEventListener("click", () => {
+        state.orderType = "dinein";
+        el.orderTypeDineIn.classList.add("bg-[#F5A623]");
+        el.orderTypeDineIn.classList.remove("bg-[#FFF8EB]");
+        el.orderTypePickup.classList.remove("bg-[#F5A623]");
+        el.orderTypePickup.classList.add("bg-[#FFF8EB]");
+      });
+
+      el.orderTypePickup.addEventListener("click", () => {
+        state.orderType = "pickup";
+        el.orderTypePickup.classList.add("bg-[#F5A623]");
+        el.orderTypePickup.classList.remove("bg-[#FFF8EB]");
+        el.orderTypeDineIn.classList.remove("bg-[#F5A623]");
+        el.orderTypeDineIn.classList.add("bg-[#FFF8EB]");
+      });
+
+      el.checkoutBtn.addEventListener("click", () => {
+        const ticket = "#94-" + Math.floor(100 + Math.random() * 899);
+        state.cart = {};
+        renderMenu();
+        renderCart();
+        closeCart();
+        showToast(`${I18N[state.lang].order_confirmed} ${ticket}`);
+      });
+
+      el.openReserveBtn.addEventListener("click", openReserve);
+      el.heroReserveBtn.addEventListener("click", openReserve);
+      el.locReserveBtn.addEventListener("click", openReserve);
+      el.mobileReserveBtn.addEventListener("click", () => {
+        el.mobileMenu.classList.add("hidden");
+        openReserve();
+      });
+      el.closeReserveBtn.addEventListener("click", closeReserve);
+      el.reserveBackdrop.addEventListener("click", closeReserve);
+      el.reserveNewBtn.addEventListener("click", closeReserve);
+
+      el.reserveForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name = el.resName.value.trim();
+        const date = el.resDate.value;
+        const time = document.getElementById("resTime").value;
+        const guests = document.getElementById("resGuests").value;
+        const seating = el.resSeating.value;
+        const code = "BR-" + Math.floor(1000 + Math.random() * 9000);
+
+        el.reserveSuccessDetails.textContent = state.lang === "ar"
+          ? `${name} • ${guests} ضيوف • ${date} الساعة ${time} • ${seating} • رقم الحجز: ${code}`
+          : `${name} • ${guests} Guests • ${date} at ${time} • ${seating} • Ref: ${code}`;
+
+        el.reserveForm.classList.add("hidden");
+        el.reserveSuccess.classList.remove("hidden");
+      });
+
+      el.copyAddressBtn.addEventListener("click", () => {
+        const text = I18N[state.lang].address_text;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(() => {
+            showToast(I18N[state.lang].copied_toast);
+          }).catch(() => {
+            fallbackCopy(text);
+          });
+        } else {
+          fallbackCopy(text);
+        }
+      });
+
+      function fallbackCopy(text) {
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+          document.execCommand("copy");
+          showToast(I18N[state.lang].copied_toast);
+        } catch (err) {
+          showToast(text);
+        }
+        document.body.removeChild(ta);
+      }
+
+      el.mobileMenuBtn.addEventListener("click", () => {
+        el.mobileMenu.classList.toggle("hidden");
+      });
+
+      document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          el.mobileMenu.classList.add("hidden");
+        });
+      });
+
+      // Set default reservation date to today
+      const today = new Date();
+      el.resDate.value = today.toISOString().split("T")[0];
+
+      // Initial render
+      applyTranslations();
+    })();
+  </script>
+</body>
+</html>
